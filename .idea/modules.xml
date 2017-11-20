@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SwedishFormats.iml" filepath="$PROJECT_DIR$/SwedishFormats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swedishformats/swedishformats.iml" filepath="$PROJECT_DIR$/swedishformats/swedishformats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swedishformats-android/swedishformats-android.iml" filepath="$PROJECT_DIR$/swedishformats-android/swedishformats-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-app/app.iml" filepath="$PROJECT_DIR$/test-app/app.iml" />
+    </modules>
+  </component>
+</project>
