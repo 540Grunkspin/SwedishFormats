@@ -18,7 +18,8 @@ Add the dependency:
 
 ```groovy
 dependencies {
-    implementation 'com.github.540Grunkspin:SwedishFormats:0.1'
+    implementation 'com.github.540Grunkspin.SwedishFormats:swedishformats:0.2'
+    implementation 'com.github.540Grunkspin.SwedishFormats:swedishformats-android:0.2'
 }
 ```
 
