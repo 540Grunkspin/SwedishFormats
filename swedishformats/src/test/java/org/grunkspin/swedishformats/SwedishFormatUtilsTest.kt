@@ -41,6 +41,30 @@ class SwedishFormatUtilsTest {
     }
 
     @Test
+    fun testFormatMeterIdWithForcedPrefix() {
+        "735 999 137 000 000 000".formatMeterId("735999").should.equal("735 999 137 000 000 000")
+        "735999137000000000".formatMeterId("735999").should.equal("735 999 137 000 000 000")
+        "73599913700000000".formatMeterId("735999").should.equal("735 999 137 000 000 00")
+        "7359991370000000".formatMeterId("735999").should.equal("735 999 137 000 000 0")
+        "735999137000000".formatMeterId("735999").should.equal("735 999 137 000 000")
+        "73599913700000".formatMeterId("735999").should.equal("735 999 137 000 00")
+        "7359991370000".formatMeterId("735999").should.equal("735 999 137 000 0")
+        "735999137000".formatMeterId("735999").should.equal("735 999 137 000")
+        "73599913700".formatMeterId("735999").should.equal("735 999 137 00")
+        "7359991370".formatMeterId("735999").should.equal("735 999 137 0")
+        "735999137".formatMeterId("735999").should.equal("735 999 137")
+        "73599913".formatMeterId("735999").should.equal("735 999 13")
+        "7359991".formatMeterId("735999").should.equal("735 999 1")
+        "735999".formatMeterId("735999").should.equal("735 999")
+        "73599".formatMeterId("735999").should.equal("735 999")
+        "7359".formatMeterId("735999").should.equal("735 999")
+        "735".formatMeterId("735999").should.equal("735 999")
+        "73".formatMeterId("735999").should.equal("735 999")
+        "7".formatMeterId("735999").should.equal("735 999")
+        "".formatMeterId("735999").should.equal("735 999")
+    }
+
+    @Test
     fun testFormatLongPersonalNumber() {
         "19930131-1234".formatLongPersonalNumber().should.equal("19930131-1234")
         "199301311234".formatLongPersonalNumber().should.equal("19930131-1234")
