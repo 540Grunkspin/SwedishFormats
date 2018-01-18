@@ -8,14 +8,15 @@ import android.support.test.rule.ActivityTestRule
 import org.junit.Rule
 import org.junit.Test
 
-class MeterIdActivityTest {
+class MeterIdForcedPrefixTest {
     @JvmField
     @Rule
-    val rule = ActivityTestRule(MeterIdActivity::class.java)
+    val rule = ActivityTestRule(ForcedPrefixMeterIdActivity::class.java)
 
     @Test
-    fun testInputMeterId() {
-        onView(withId(R.id.input)).perform(typeText("735999137000000000"))
+    fun testForcedPrefix() {
+        onView(withId(R.id.input)).perform(typeText("137000000000"))
         onView(withText("735 999 137 000 000 000")).check(matches(isDisplayed()))
     }
 }
+
