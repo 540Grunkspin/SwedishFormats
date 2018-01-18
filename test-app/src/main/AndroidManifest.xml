@@ -22,5 +22,6 @@
         <activity
             android:name=".PostalCodeActivity"
             android:theme="@style/AppTheme" />
+        <activity android:name=".ForcedPrefixMeterIdActivity"/>
     </application>
 </manifest>

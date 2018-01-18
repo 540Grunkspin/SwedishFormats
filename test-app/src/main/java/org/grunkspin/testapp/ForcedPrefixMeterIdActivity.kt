@@ -7,13 +7,17 @@ import android.widget.EditText
 import org.grunkspin.swedishformats.METER_ID_LENGTH
 import org.grunkspin.swedishformats.android.MeterIdFormatter
 
-class MeterIdActivity : AppCompatActivity() {
+class ForcedPrefixMeterIdActivity : AppCompatActivity() {
+
+    private val prefix = "735999"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_layout)
 
         val inputField = findViewById<EditText>(R.id.input)
-        inputField.addTextChangedListener(MeterIdFormatter())
+        inputField.setText(prefix)
+        inputField.addTextChangedListener(MeterIdFormatter(forcedPrefix = prefix))
         inputField.filters = arrayOf(InputFilter.LengthFilter(METER_ID_LENGTH))
     }
 }
