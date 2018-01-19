@@ -9,12 +9,13 @@ android:
   - android-21
   - android-27
 
-  - extra-google-google_play_services
-  - extra-google-m2repository
-  - extra-android-m2repository
-  - addon-google_apis-google-26
+  - add-on
+  - extra
 
   - sys-img-armeabi-v7a-android-21
+
+before_install:
+  - yes | sdkmanager "platforms;android-27"
 
 before_script:
   - ./gradlew clean assemble assembleAndroidTest
