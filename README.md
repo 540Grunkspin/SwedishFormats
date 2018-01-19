@@ -36,9 +36,7 @@ class MeterIdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_layout)
-        val inputField = findViewById<EditText>(R.id.input)
-        inputField.addTextChangedListener(MeterIdFormatter())
-        inputField.filters = arrayOf(InputFilter.LengthFilter(METER_ID_LENGTH))
+        findViewById<EditText>(R.id.input).formatAsMeterId()
     }
 }
 ```

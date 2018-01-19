@@ -17,19 +17,38 @@
 
 package org.grunkspin.swedishformats
 
+@Suppress("PropertyName")
 val POSTAL_CODE_LENGTH = 6
+@Suppress("PropertyName")
 val METER_ID_LENGTH = 23
+@Suppress("PropertyName")
 val LONG_PERSONAL_NUMBER_LENGTH = 13
+@Suppress("PropertyName")
 val SHORT_PERSONAL_NUMBER_LENGTH = 11
 
+/**
+ * Formats a string a as swedish postal code.
+ *
+ * @return A formatted version of the original string.
+ */
 fun String.formatPostalCode(): String = this
         .unformatPostalCode()
         .replace(Regex("\\d{3}(?!$)")) {
             it.value + " "
         }
 
+/**
+ * Removes formatting applied by [formatPostalCode].
+ *
+ * @return An unformatted version of the original string.
+ */
 fun String.unformatPostalCode(): String = this.replace(" ", "")
 
+/**
+ * Format a string as a meter id.
+ *
+ * @return A formatted version of the original string.
+ */
 fun String.formatMeterId(forcedPrefix: String = ""): String = this
         .unformatMeterId()
         .let {
@@ -40,18 +59,38 @@ fun String.formatMeterId(forcedPrefix: String = ""): String = this
             it.value + " "
         }
 
+/**
+ * Removes formatting applied by [formatMeterId].
+ *
+ * @return An unformatted version of the original string.
+ */
 fun String.unformatMeterId(): String = this.replace(" ", "")
 
+/**
+ * Format a string as a long swedish personal number (YYYYMMDD-XXXX).
+ *
+ * @return A formatted version of the original string.
+ */
 fun String.formatLongPersonalNumber(): String = this
         .unformatPersonalNumber()
         .replace(Regex("\\d{8}(?!$)")) {
             it.value + "-"
         }
 
+/**
+ * Format a string as a short swedish personal number (YYMMDD-XXXX).
+ *
+ * @return A formatted version of the original string.
+ */
 fun String.formatShortPersonalNumber(): String = this
         .unformatPersonalNumber()
         .replace(Regex("\\d{6}(?!$)")) {
             it.value + "-"
         }
 
+/**
+ * Removes formatting applied by either [formatLongPersonalNumber] or [formatShortPersonalNumber].
+ *
+ * @return An unformatted version of the original string.
+ */
 fun String.unformatPersonalNumber(): String = this.replace("-", "")
