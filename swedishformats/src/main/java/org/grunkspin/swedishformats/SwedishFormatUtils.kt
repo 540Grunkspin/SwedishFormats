@@ -33,7 +33,7 @@ fun String.unformatPostalCode(): String = this.replace(" ", "")
 fun String.formatMeterId(forcedPrefix: String = ""): String = this
         .unformatMeterId()
         .let {
-            if (it.length < forcedPrefix.length) forcedPrefix
+            if (it.length < forcedPrefix.unformatMeterId().length) forcedPrefix.unformatMeterId()
             else it
         }
         .replace(Regex("\\d{3}(?!$)")) {
