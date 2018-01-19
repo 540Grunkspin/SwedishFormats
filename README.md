@@ -1,4 +1,4 @@
-# Swedish Formats [![Build Status](https://travis-ci.org/540Grunkspin/swedishformats.svg?branch=master)](https://travis-ci.org/540Grunkspin/swedishformats)
+# Swedish Formats [![Build Status](https://travis-ci.org/540Grunkspin/swedishformats.svg?branch=master)](https://travis-ci.org/540Grunkspin/swedishformats) [![](https://jitpack.io/v/540Grunkspin/swedishformats.svg)](https://jitpack.io/#540Grunkspin/swedishformats)
 
 This is a collection of input formatters that I use on an every day basis.
 
