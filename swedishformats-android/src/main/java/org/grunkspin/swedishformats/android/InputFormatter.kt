@@ -18,7 +18,7 @@ package org.grunkspin.swedishformats.android
 import android.text.Editable
 import android.text.TextWatcher
 
-abstract class InputFormatter : TextWatcher {
+internal abstract class InputFormatter : TextWatcher {
     private var isFormatting = false
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {

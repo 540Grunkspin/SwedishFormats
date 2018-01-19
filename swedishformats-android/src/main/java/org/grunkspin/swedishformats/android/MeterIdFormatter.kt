@@ -17,7 +17,7 @@ package org.grunkspin.swedishformats.android
 
 import org.grunkspin.swedishformats.formatMeterId
 
-class MeterIdFormatter(
+internal class MeterIdFormatter(
         private val forcedPrefix: String = ""
 ) : InputFormatter() {
     override fun formatText(input: String): String = input.formatMeterId(forcedPrefix)
