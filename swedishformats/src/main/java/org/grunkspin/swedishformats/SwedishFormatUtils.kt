@@ -18,12 +18,16 @@
 package org.grunkspin.swedishformats
 
 @Suppress("PropertyName")
+@JvmField
 val POSTAL_CODE_LENGTH = 6
 @Suppress("PropertyName")
+@JvmField
 val METER_ID_LENGTH = 23
 @Suppress("PropertyName")
+@JvmField
 val LONG_PERSONAL_NUMBER_LENGTH = 13
 @Suppress("PropertyName")
+@JvmField
 val SHORT_PERSONAL_NUMBER_LENGTH = 11
 
 /**
