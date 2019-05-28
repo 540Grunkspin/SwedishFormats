@@ -4,8 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SwedishFormats.iml" filepath="$PROJECT_DIR$/SwedishFormats.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-app/app.iml" filepath="$PROJECT_DIR$/test-app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/swedishformats.iml" filepath="$PROJECT_DIR$/.idea/swedishformats.iml" />
       <module fileurl="file://$PROJECT_DIR$/swedishformats/swedishformats.iml" filepath="$PROJECT_DIR$/swedishformats/swedishformats.iml" />
       <module fileurl="file://$PROJECT_DIR$/swedishformats-android/swedishformats-android.iml" filepath="$PROJECT_DIR$/swedishformats-android/swedishformats-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swedishformats-android/swedishformats-android.iml" filepath="$PROJECT_DIR$/swedishformats-android/swedishformats-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swedishformats/swedishformats-swedishformats.iml" filepath="$PROJECT_DIR$/swedishformats/swedishformats-swedishformats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test-app/test-app.iml" filepath="$PROJECT_DIR$/test-app/test-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-app/test-app.iml" filepath="$PROJECT_DIR$/test-app/test-app.iml" />
     </modules>
   </component>

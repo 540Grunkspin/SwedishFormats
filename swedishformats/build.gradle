@@ -1,9 +1,7 @@
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
 apply plugin: 'maven'
-apply plugin: 'org.jetbrains.dokka'
-
-group='com.github.540Grunkspin.SwedishFormats'
+apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -12,9 +10,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation "com.winterbe:expekt:0.5.0"
 }
-
-sourceCompatibility = "1.6"
-targetCompatibility = "1.6"
 
 buildscript {
     repositories {
@@ -45,13 +40,19 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
-task javadocJar(type: Jar, dependsOn: dokka) {
-    classifier = 'javadoc'
-    from dokka.outputDirectory
-}
-
 artifacts {
     archives sourcesJar
-    archives javadocJar
+}
+
+publish {
+    bintrayUser = bintrayProperties['bintray.user']
+    bintrayKey = bintrayProperties['bintray.key']
+    userOrg = 'antonholmberg'
+    groupId = 'org.grunkspin'
+    artifactId = 'swedishformats'
+    publishVersion = '1.0.0'
+    desc = 'Base kotlin package for swedish formats'
+    website = 'https://github.com/antonholmberg/swedishformats'
+    dryRun = false
 }
 
